@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-pokemon-normal: #A8A878;
+  --color-pokemon-fire: #F08030;
+  --color-pokemon-water: #6890F0;
+  --color-pokemon-electric: #F8D030;
+  --color-pokemon-grass: #78C850;
+  --color-pokemon-ice: #98D8D8;
+  --color-pokemon-fighting: #C03028;
+  --color-pokemon-poison: #A040A0;
+  --color-pokemon-ground: #E0C068;
+  --color-pokemon-flying: #A890F0;
+  --color-pokemon-psychic: #F85888;
+  --color-pokemon-bug: #A8B820;
+  --color-pokemon-rock: #B8A038;
+  --color-pokemon-ghost: #705898;
+  --color-pokemon-dragon: #7038F8;
+  --color-pokemon-dark: #705848;
+  --color-pokemon-steel: #B8B8D0;
+  --color-pokemon-fairy: #EE99AC;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+}
+
+.pokemon-card {
+  @apply relative overflow-hidden rounded-2xl transition-all duration-300;
+}
+
+.type-badge {
+  @apply px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-white shadow-sm;
+}
